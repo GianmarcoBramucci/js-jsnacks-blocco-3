@@ -2,12 +2,12 @@
 let max= prompt("inserisci il massimo:");
 let min= prompt("inserisci il minimo:");
 let appo;
-if(min<max){
+if(min>max){
     appo=max;
     max=min;
     min=appo
 }
-let numeroRandom=Math.round(Math.random()*(max-min))+1;
+let numeroRandom=Math.floor(Math.random()*(max-min))+min;
 alert(numeroRandom);
 // JSnack2
 const stringa1=prompt('inserisci la prima stringa')
@@ -21,6 +21,7 @@ else if(stringa1.length>stringa2.length){
 else{
     alert(stringa2)
 }
+
 // JSnack3
 let arrayInfi=[];
 let somma=0;
@@ -29,13 +30,13 @@ do {
     arrayInfi.push(prompt("inserisci un mumero"));
     somma=somma+arrayInfi[i];
 }
-while(somma>49)
-media=somma % arrayInfi.length;
+while(somma<49)
+media=somma / arrayInfi.length;
 alert(somma);
 alert(media);
 // JSnack4
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-    let evenNumbers = [];
+let evenNumbers = [];
     for (let i = 0; i < numbers.length - 1; i++) {
         if (numbers % 2 == 0) {
             evenNumbers.push(i);
